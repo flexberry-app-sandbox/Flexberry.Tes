@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Клиент",
+      "projection": "КлиентL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Продажа",
+  "name": "IISTesПродажаE",
+  "className": "ПродажаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-tes-продажа",
+      "modelProjection": "ПродажаE"
+    }
+  ]
+}

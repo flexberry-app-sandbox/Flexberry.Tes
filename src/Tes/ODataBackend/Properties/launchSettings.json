@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "IIS.Tes": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BackendRoot": "http://localhost",
+        "DefConnStr": "SERVER=localhost;User ID=postgres;Password=p@ssw0rd;Port=5432;database=appdb;"
+      }
+    }
+  }
+}

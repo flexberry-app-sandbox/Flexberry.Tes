@@ -1,0 +1,29 @@
+﻿{
+  "applicationCaption": "Tes",
+  "applicationTitle": "Tes",
+  "items": [
+    {
+      "link": null,
+      "menuName": "tes",
+      "caption": "Tes",
+      "title": "Tes",
+      "children": [
+        {
+          "link": "i-i-s-tes-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-tes-продажа-l",
+          "menuName": null,
+          "caption": "Продажа",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

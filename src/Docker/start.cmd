@@ -1,0 +1,1 @@
+docker-compose -p tes up -d
