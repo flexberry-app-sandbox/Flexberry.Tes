@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Тип продажи",
+  "name": "IISTesТипПродажиE",
+  "className": "ТипПродажиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-tes-тип-продажи",
+      "modelProjection": "ТипПродажиE"
+    }
+  ]
+}

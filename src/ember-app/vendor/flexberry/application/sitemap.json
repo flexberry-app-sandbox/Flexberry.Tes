@@ -21,6 +21,13 @@
           "caption": "Продажа",
           "title": "",
           "children": null
+        },
+        {
+          "link": "i-i-s-tes-тип-продажи-l",
+          "menuName": null,
+          "caption": "Тип продажи",
+          "title": "",
+          "children": null
         }
       ]
     }

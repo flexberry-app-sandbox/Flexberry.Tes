@@ -10,7 +10,9 @@ moduleForModel('i-i-s-tes-клиент', 'Unit | Serializer | i-i-s-tes-клие
     'transform:guid',
 
     'model:i-i-s-tes-клиент',
+    'model:i-i-s-tes-позиция',
     'model:i-i-s-tes-продажа',
+    'model:i-i-s-tes-тип-продажи',
     'validator:ds-error',
     'validator:presence',
     'validator:number',

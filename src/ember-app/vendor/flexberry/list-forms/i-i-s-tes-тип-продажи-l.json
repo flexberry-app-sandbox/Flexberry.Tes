@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-tes-тип-продажи-e",
+  "editForm": "i-i-s-tes-тип-продажи-e",
+  "external": false,
+  "caption": "Тип продажи",
+  "name": "IISTesТипПродажиL",
+  "className": "ТипПродажиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-tes-тип-продажи",
+      "modelProjection": "ТипПродажиL"
+    }
+  ]
+}

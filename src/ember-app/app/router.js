@@ -16,6 +16,11 @@ Router.map(function () {
   { path: 'i-i-s-tes-продажа-e/:id' });
   this.route('i-i-s-tes-продажа-e.new',
   { path: 'i-i-s-tes-продажа-e/new' });
+  this.route('i-i-s-tes-тип-продажи-l');
+  this.route('i-i-s-tes-тип-продажи-e',
+  { path: 'i-i-s-tes-тип-продажи-e/:id' });
+  this.route('i-i-s-tes-тип-продажи-e.new',
+  { path: 'i-i-s-tes-тип-продажи-e/new' });
 });
 
 export default Router;

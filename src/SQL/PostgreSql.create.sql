@@ -3,6 +3,19 @@
 
 
 
+CREATE TABLE ТипПродажи (
+ primaryKey UUID NOT NULL,
+ Название VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Позиция (
+ primaryKey UUID NOT NULL,
+ Колич INT NULL,
+ Продажа_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
 CREATE TABLE Клиент (
  primaryKey UUID NOT NULL,
  ФИО VARCHAR(255) NULL,
@@ -14,6 +27,7 @@ CREATE TABLE Продажа (
  Дата TIMESTAMP(3) NULL,
  Сумма INT NULL,
  Коммент VARCHAR(255) NULL,
+ ТипПродажи_m0 UUID NOT NULL,
  Клиент_m0 UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
@@ -121,6 +135,12 @@ CREATE TABLE ApplicationLog (
  PRIMARY KEY (primaryKey));
 
 
+
+ ALTER TABLE Позиция ADD CONSTRAINT FKd096dc92ef9d1b6abebccd79158493ddf7f7a1eb FOREIGN KEY (Продажа_m0) REFERENCES Продажа; 
+CREATE INDEX Indexd096dc92ef9d1b6abebccd79158493ddf7f7a1eb on Позиция (Продажа_m0); 
+
+ ALTER TABLE Продажа ADD CONSTRAINT FKbec651440e2fb35fba55e7ca28e1dcb30e74dd2d FOREIGN KEY (ТипПродажи_m0) REFERENCES ТипПродажи; 
+CREATE INDEX Indexbec651440e2fb35fba55e7ca28e1dcb30e74dd2d on Продажа (ТипПродажи_m0); 
 
  ALTER TABLE Продажа ADD CONSTRAINT FK0bc64656dab6ff910849d039d6416649eaa41214 FOREIGN KEY (Клиент_m0) REFERENCES Клиент; 
 CREATE INDEX Index0bc64656dab6ff910849d039d6416649eaa41214 on Продажа (Клиент_m0); 

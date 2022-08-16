@@ -4,7 +4,9 @@ moduleForModel('i-i-s-tes-продажа', 'Unit | Model | i-i-s-tes-прода�
   // Specify the other units that are required for this test.
   needs: [
     'model:i-i-s-tes-клиент',
+    'model:i-i-s-tes-позиция',
     'model:i-i-s-tes-продажа',
+    'model:i-i-s-tes-тип-продажи',
     'validator:ds-error',
     'validator:presence',
     'validator:number',

@@ -33,14 +33,21 @@ namespace IIS.Tes
             "Сумма as \'Сумма\'",
             "Коммент as \'Коммент\'",
             "Клиент as \'Клиент\'",
-            "Клиент.ФИО as \'ФИО\'"}, Hidden=new string[] {
-            "Клиент.ФИО"})]
+            "Клиент.ФИО as \'ФИО\'",
+            "ТипПродажи as \'Тип продажи\'",
+            "ТипПродажи.Название"}, Hidden=new string[] {
+            "Клиент.ФИО",
+            "ТипПродажи.Название"})]
+    [AssociatedDetailViewAttribute("ПродажаE", "Позиция", "ПозицияE", false, "", "Товары", true, new string[] {
+            ""})]
     [MasterViewDefineAttribute("ПродажаE", "Клиент", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИО")]
+    [MasterViewDefineAttribute("ПродажаE", "ТипПродажи", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Название")]
     [View("ПродажаL", new string[] {
             "Дата as \'Дата\'",
             "Сумма as \'Сумма\'",
             "Коммент as \'Коммент\'",
-            "Клиент.ФИО as \'ФИО\'"})]
+            "Клиент.ФИО as \'ФИО\'",
+            "ТипПродажи.Название as \'Тип продажи\'"})]
     public class Продажа : ICSSoft.STORMNET.DataObject
     {
         
@@ -51,6 +58,10 @@ namespace IIS.Tes
         private string fКоммент;
         
         private IIS.Tes.Клиент fКлиент;
+        
+        private IIS.Tes.ТипПродажи fТипПродажи;
+        
+        private IIS.Tes.DetailArrayOfПозиция fПозиция;
         
         // *** Start programmer edit section *** (Продажа CustomMembers)
 
@@ -180,6 +191,73 @@ namespace IIS.Tes
                 // *** Start programmer edit section *** (Продажа.Клиент Set end)
 
                 // *** End programmer edit section *** (Продажа.Клиент Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Продажа.
+        /// </summary>
+        // *** Start programmer edit section *** (Продажа.ТипПродажи CustomAttributes)
+
+        // *** End programmer edit section *** (Продажа.ТипПродажи CustomAttributes)
+        [NotNull()]
+        public virtual IIS.Tes.ТипПродажи ТипПродажи
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Продажа.ТипПродажи Get start)
+
+                // *** End programmer edit section *** (Продажа.ТипПродажи Get start)
+                IIS.Tes.ТипПродажи result = this.fТипПродажи;
+                // *** Start programmer edit section *** (Продажа.ТипПродажи Get end)
+
+                // *** End programmer edit section *** (Продажа.ТипПродажи Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Продажа.ТипПродажи Set start)
+
+                // *** End programmer edit section *** (Продажа.ТипПродажи Set start)
+                this.fТипПродажи = value;
+                // *** Start programmer edit section *** (Продажа.ТипПродажи Set end)
+
+                // *** End programmer edit section *** (Продажа.ТипПродажи Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Продажа.
+        /// </summary>
+        // *** Start programmer edit section *** (Продажа.Позиция CustomAttributes)
+
+        // *** End programmer edit section *** (Продажа.Позиция CustomAttributes)
+        public virtual IIS.Tes.DetailArrayOfПозиция Позиция
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Продажа.Позиция Get start)
+
+                // *** End programmer edit section *** (Продажа.Позиция Get start)
+                if ((this.fПозиция == null))
+                {
+                    this.fПозиция = new IIS.Tes.DetailArrayOfПозиция(this);
+                }
+                IIS.Tes.DetailArrayOfПозиция result = this.fПозиция;
+                // *** Start programmer edit section *** (Продажа.Позиция Get end)
+
+                // *** End programmer edit section *** (Продажа.Позиция Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Продажа.Позиция Set start)
+
+                // *** End programmer edit section *** (Продажа.Позиция Set start)
+                this.fПозиция = value;
+                // *** Start programmer edit section *** (Продажа.Позиция Set end)
+
+                // *** End programmer edit section *** (Продажа.Позиция Set end)
             }
         }
         

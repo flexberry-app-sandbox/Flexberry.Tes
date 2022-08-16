@@ -2,6 +2,30 @@
 
 
 
+CREATE TABLE "ТипПродажи"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"Название" NVARCHAR2(255) NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
+CREATE TABLE "Позиция"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"Колич" NUMBER(10) NULL,
+
+	"Продажа_m0" RAW(16) NOT NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
 CREATE TABLE "Клиент"
 (
 
@@ -23,6 +47,8 @@ CREATE TABLE "Продажа"
 	"Сумма" NUMBER(10) NULL,
 
 	"Коммент" NVARCHAR2(255) NULL,
+
+	"ТипПродажи_m0" RAW(16) NOT NULL,
 
 	"Клиент_m0" RAW(16) NOT NULL,
 
@@ -227,6 +253,16 @@ CREATE TABLE "ApplicationLog"
 ) ;
 
 
+
+ALTER TABLE "Позиция"
+	ADD CONSTRAINT "Позиция_FПрод_8994" FOREIGN KEY ("Продажа_m0") REFERENCES "Продажа" ("primaryKey");
+
+CREATE INDEX "Позиция_IПрода_160" on "Позиция" ("Продажа_m0");
+
+ALTER TABLE "Продажа"
+	ADD CONSTRAINT "Продажа_FТипПр_655" FOREIGN KEY ("ТипПродажи_m0") REFERENCES "ТипПродажи" ("primaryKey");
+
+CREATE INDEX "Продажа_IТипПр_965" on "Продажа" ("ТипПродажи_m0");
 
 ALTER TABLE "Продажа"
 	ADD CONSTRAINT "Продажа_FКлиент_0" FOREIGN KEY ("Клиент_m0") REFERENCES "Клиент" ("primaryKey");

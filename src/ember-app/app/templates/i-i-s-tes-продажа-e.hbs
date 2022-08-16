@@ -73,4 +73,36 @@
     }}
     {{flexberry-validationmessage error=(v-get validationModel "клиент" "message")}}
   </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-tes-продажа-e.типПродажи-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.типПродажи
+      displayAttributeName="название"
+      autocomplete=true
+      relationName="типПродажи"
+      projection="ТипПродажиL"
+      title=(t "forms.i-i-s-tes-продажа-e.типПродажи-caption")
+      readonly=readonly
+      componentName="типПродажиLookup"
+      class=(if (v-get validationModel "типПродажи" "isInvalid") "error")
+      data-test-i-i-s-tes-продажа-e-типПродажи=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "типПродажи" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-tes-продажа-e.позиция-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="позицияGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.позиция
+      content=model.позиция
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "позиция" "isInvalid") "error")
+      data-test-i-i-s-tes-продажа-e-позиция=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "позиция" "message")}}
+  </div>
 </form>

@@ -38,12 +38,25 @@
     {
       "polymorphic": false,
       "presence": true,
+      "name": "типПродажи",
+      "relatedTo": "i-i-s-tes-тип-продажи",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
       "name": "клиент",
       "relatedTo": "i-i-s-tes-клиент",
       "inverse": null
     }
   ],
-  "hasMany": [],
+  "hasMany": [
+    {
+      "name": "позиция",
+      "relatedTo": "i-i-s-tes-позиция",
+      "inverse": "продажа"
+    }
+  ],
   "projections": [
     {
       "name": "ПродажаE",
@@ -89,9 +102,38 @@
           "name": "клиент",
           "relatedTo": "i-i-s-tes-клиент",
           "inverse": null
+        },
+        {
+          "lookupValue": "Название",
+          "lookupValueField": "название",
+          "relationName": "ТипПродажи",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Тип продажи",
+          "name": "типПродажи",
+          "relatedTo": "i-i-s-tes-тип-продажи",
+          "inverse": null
         }
       ],
-      "hasMany": []
+      "hasMany": [
+        {
+          "projectionName": "ПозицияE",
+          "caption": "Товары",
+          "name": "позиция",
+          "relatedTo": "i-i-s-tes-позиция",
+          "inverse": null
+        }
+      ]
     },
     {
       "name": "ПродажаL",
@@ -136,6 +178,27 @@
           "caption": "ФИО",
           "name": "клиент",
           "relatedTo": "i-i-s-tes-клиент",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ТипПродажи",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "название",
+              "caption": "Тип продажи",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Тип продажи",
+          "name": "типПродажи",
+          "relatedTo": "i-i-s-tes-тип-продажи",
           "inverse": null
         }
       ],

@@ -2,6 +2,26 @@
 
 
 
+CREATE TABLE [ТипПродажи] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [Название] VARCHAR(255)  NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
+CREATE TABLE [Позиция] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [Колич] INT  NULL,
+
+	 [Продажа_m0] UNIQUEIDENTIFIER  NOT NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
 CREATE TABLE [Клиент] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
@@ -20,6 +40,8 @@ CREATE TABLE [Продажа] (
 	 [Сумма] INT  NULL,
 
 	 [Коммент] VARCHAR(255)  NULL,
+
+	 [ТипПродажи_m0] UNIQUEIDENTIFIER  NOT NULL,
 
 	 [Клиент_m0] UNIQUEIDENTIFIER  NOT NULL,
 

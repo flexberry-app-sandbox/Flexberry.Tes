@@ -1,0 +1,48 @@
+﻿{
+  "name": "IISTesПозиция",
+  "modelName": "i-i-s-tes-позиция",
+  "className": "Позиция",
+  "nameSpace": "IIS.Tes",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "колич",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "продажа",
+      "relatedTo": "i-i-s-tes-продажа",
+      "inverse": "позиция"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПозицияE",
+      "modelName": "i-i-s-tes-позиция",
+      "attrs": [
+        {
+          "name": "колич",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
