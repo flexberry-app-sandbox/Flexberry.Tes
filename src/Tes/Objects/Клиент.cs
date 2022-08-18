@@ -27,6 +27,7 @@ namespace IIS.Tes
 
     // *** End programmer edit section *** (Клиент CustomAttributes)
     [AutoAltered()]
+    [Caption("Клиенто моменто")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("КлиентE", new string[] {
             "ФИО as \'ФИО\'"})]
