@@ -29,7 +29,7 @@ namespace IIS.Tes
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ПродажаE", new string[] {
-            "Дата as \'Дата\'",
+            "Дата as \'Датуська\'",
             "Сумма as \'Сумма\'",
             "Коммент as \'Коммент\'",
             "Клиент as \'Клиент\'",
@@ -43,7 +43,7 @@ namespace IIS.Tes
     [MasterViewDefineAttribute("ПродажаE", "Клиент", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИО")]
     [MasterViewDefineAttribute("ПродажаE", "ТипПродажи", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Название")]
     [View("ПродажаL", new string[] {
-            "Дата as \'Дата\'",
+            "Дата as \'Датуська\'",
             "Сумма as \'Сумма\'",
             "Коммент as \'Коммент\'",
             "Клиент.ФИО as \'ФИО\'",

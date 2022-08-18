@@ -59,7 +59,7 @@ export let ValidationRules = {
 
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ПродажаE', 'i-i-s-tes-продажа', {
-    дата: attr('Дата', { index: 0 }),
+    дата: attr('Датуська', { index: 0 }),
     сумма: attr('Сумма', { index: 1 }),
     коммент: attr('Коммент', { index: 2 }),
     клиент: belongsTo('i-i-s-tes-клиент', 'Клиент', {
@@ -74,7 +74,7 @@ export let defineProjections = function (modelClass) {
   });
 
   modelClass.defineProjection('ПродажаL', 'i-i-s-tes-продажа', {
-    дата: attr('Дата', { index: 0 }),
+    дата: attr('Датуська', { index: 0 }),
     сумма: attr('Сумма', { index: 1 }),
     коммент: attr('Коммент', { index: 2 }),
     клиент: belongsTo('i-i-s-tes-клиент', 'ФИО', {

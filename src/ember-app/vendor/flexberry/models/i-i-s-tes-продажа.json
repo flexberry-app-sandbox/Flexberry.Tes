@@ -64,7 +64,7 @@
       "attrs": [
         {
           "name": "дата",
-          "caption": "Дата",
+          "caption": "Датуська",
           "hidden": false,
           "index": 0
         },
@@ -141,7 +141,7 @@
       "attrs": [
         {
           "name": "дата",
-          "caption": "Дата",
+          "caption": "Датуська",
           "hidden": false,
           "index": 0
         },
