@@ -27,6 +27,7 @@ namespace IIS.Tes
 
     // *** End programmer edit section *** (Продажа CustomAttributes)
     [AutoAltered()]
+    [Caption("Прод")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ПродажаE", new string[] {
             "Дата as \'Датуська\'",
