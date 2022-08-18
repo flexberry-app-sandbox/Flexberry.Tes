@@ -28,13 +28,13 @@ export default Controller.extend({
             link: 'i-i-s-tes-клиент-l',
             caption: i18n.t('forms.application.sitemap.tes.i-i-s-tes-клиент-l.caption'),
             title: i18n.t('forms.application.sitemap.tes.i-i-s-tes-клиент-l.title'),
-            icon: 'address card',
+            icon: 'chart bar',
             children: null
           }, {
             link: 'i-i-s-tes-продажа-l',
             caption: i18n.t('forms.application.sitemap.tes.i-i-s-tes-продажа-l.caption'),
             title: i18n.t('forms.application.sitemap.tes.i-i-s-tes-продажа-l.title'),
-            icon: 'archive',
+            icon: 'building',
             children: null
           }, {
             link: 'i-i-s-tes-тип-продажи-l',
